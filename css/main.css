@@ -1,0 +1,708 @@
+
+body{
+    font-family: 'Roboto Condensed', sans-serif; 
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+
+.global{
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+
+}
+
+/*  ========================   Burger Menu   ======================== */
+.burger-main{
+  z-index: 99;
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 15%;
+}
+  .nav-menu{
+    transition-duration: 1s;
+    display: none;
+    position: sticky;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 0; 
+    height: 100%;
+    width: 100%;
+  }
+  .nav-menu.active{
+    transition-duration: 1s;
+    background-color: rgb(19, 78, 204);
+    opacity: 1;
+    display: block;
+  }
+  .nav-menu ul{
+    list-style-type: none;
+    text-align: center; 
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .nav-menu li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+   
+  }
+  .nav-menu a{
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-menu a > li:hover{
+    transition-duration: 0.5s;
+    font-weight: bold;
+    font-size: 27px;
+  
+  }
+  .nav-menu a > li{
+    transition-duration: 0.5s;
+  }
+  .actived{
+    background-color: rgb(97, 97, 97);
+
+}
+.actived::before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-weight: 900;
+  padding-right: 5px;
+  
+}
+/* =================   Icon burger ======================== */
+.icon-menu{
+  margin-left: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  /* left: 100%; */
+  transition-duration: 0.5s;
+}
+.icon-menu:hover{
+  cursor: pointer;
+}
+.bar{
+  width: 100%;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 8px;
+  box-shadow: 0px 0px 1px gray;
+}
+.icon-menu .bar{
+  transition-duration: 0.5s;
+}
+.icon-menu.active {
+  margin-top: 5%;
+
+  transition-duration: 0.5s;
+}
+
+.icon-menu.active .bar:nth-child(1) {
+  top: 3%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+  transform-origin: 35% 35%;
+  box-shadow: none;
+}
+.icon-menu.active .bar:nth-child(2) {
+
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+  transform-origin: 25% 35%;
+  box-shadow: none;
+}
+.icon-menu.active .bar:nth-child(3) {
+  opacity: 0;
+  transition-duration: 0s;
+}
+/*  ================================= index.html ============================== */
+/*  =======================   Conteneur principal    ========================= */
+#header{
+  /* background-color: rgb(36, 142, 241); */
+  color: whitesmoke;
+  width: 100%;
+}
+.title{
+  position: relative;
+  width: 100%;
+  background-color: rgb(36, 142, 241);
+}
+.sub-title{
+  color: black;
+  background-color: rgb(248, 248, 248);
+  border-bottom: 1px solid rgb(204, 205, 207);
+}
+.title-page{
+  text-shadow: 0px 0px 5px black;
+}
+h1{
+  position: relative;
+  text-transform:uppercase;
+  font-size: 45px;
+  }
+  .description::after{
+
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f011";
+    font-size: 25px;
+    font-weight: 900;
+    color: green;
+    padding-left: 5px;
+}
+.description::after{
+
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f011";
+    font-size: 25px;
+    font-weight: 900;
+    color: green;
+    padding-left: 5px;
+}
+  .container{
+    position: relative;
+    margin: auto;
+    width: 85%;
+    padding: 10px;
+  }
+  .text-center{
+    text-align: center;
+  }
+
+.infos{
+  margin: auto;
+  width: 50%;
+}
+.fa-newspaper{
+  position: absolute;
+  color: black;
+  transform: rotate(15deg);
+  font-size: 15vh;
+  top: 40px;
+  right: 25%;
+}
+.center{
+  margin: auto !important;
+  width: 100% !important;
+}
+.icon{
+  padding-top: 50px;
+  padding-bottom: 15%;
+}
+
+/* ===================   Carte et containeur Team top   ====================== */
+.team-container{
+  background-color: rgb(36, 142, 241);
+  width: 100%;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards > div{
+  border-radius: 5px;
+  margin: 15px 10px 20px 10px;
+  width: 250px;
+  height: 100%;
+}
+.card{
+
+}
+.card-img{
+  /* border-radius: 5px; */
+  background-color: dimgrey;
+  height: 155px;
+  width: 250px;
+  transition-duration: 0.5s;
+}
+.card-img:hover img{
+  /* border-radius: 5px; */
+ filter: blur(4px);
+  transition-duration: 0.5s;
+}
+.card-img img{
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
+  height: 155px;
+  object-fit: cover;
+  width: 250px;
+  transition-duration: 0.5s;
+}
+.card-info{
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-self: auto;
+  /* top: 150px; */
+  transition-duration: 0.5s;
+}
+.card-info-text{
+  color: rgb(73, 73, 80);
+  text-align: left;
+  padding: 5% 15%;
+  background-color: rgb(36, 142, 241);
+}
+.card-img:hover .card-info{
+  /* z-index: 999; */
+  opacity: 1;
+}
+.card-body{
+  background-color: whitesmoke;
+  height: 50%;
+  width: 100%;
+}
+.card-title{
+  height: auto;
+  text-transform: uppercase;
+  width: 75%;
+  padding-top: 10px;
+  margin: auto;
+  color: black;
+}
+.card-text{
+  height: auto;
+  width: 100%;
+  color: gray;
+  
+  /* padding: 10px 0 10px 0; */
+
+}
+.card-text p{
+  margin: 0;
+  padding: 10px 5px 10px 5px;
+  text-overflow: ellipsis; 
+}
+.card-footer{
+  z-index: 99;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+  width: 100%;
+  background-color: rgb(214, 214, 214);
+  height: 80%;
+  
+}
+/* =====================   Contact conteneur   ================================= */
+
+.contact-container{
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+.contact-container h3{
+  /* text-shadow: 0px 0px 1px black; */
+  /* color: black; */
+}
+.gmap{
+  width: 100%;
+  height: 25%;
+}
+form{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.information{
+  padding-top: 55px;
+}
+input{
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 400px;;
+  padding: 10px 0;
+  margin: 5px 0;
+  background-color: inherit;
+  transition-duration: .2s;
+}
+input:focus{
+  border-bottom: 2px solid rgb(24, 111, 192);
+  box-shadow:0 1px 0 0 #125480;
+  outline: none;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  transition-property: all;
+}
+
+input[type=submit]{
+  width: 25%;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+input[type=submit]:active{
+  background-color: rgb(24, 111, 192);
+  color: white;
+  border: none;
+}
+input[type=submit]:focus{
+  border: none;
+}
+.fa-stack{ 
+  margin-right: 10px;
+}
+textarea{
+  border: none;
+  border-bottom: 1px solid gray;
+  resize: none;
+  width: 50%;
+  background-color: inherit;
+  overflow-x: hidden;
+  outline: none;
+  box-sizing: content-box;
+  transition: all .3s;
+  -webkit-appearance: textarea;
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-writing-mode: horizontal-tb !important;
+}
+textarea:focus{
+  border-bottom: 2px solid rgb(24, 111, 192);
+  box-shadow:0 1px 0 0 #125480;
+  outline: none;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* =======================   Bas de page    =============================== */
+
+.footer-container{
+  background-color: rgb(97, 97, 97);
+  color: whitesmoke;
+}
+footer{
+  display: flex;
+}
+footer > div{
+  width: 50%;
+}
+.backTop{
+  position: absolute;
+  bottom: 13px;
+  right: 5%;
+  color: rgb(255, 255, 255);
+  transition-duration: 0.5s;
+}
+.backTop:hover{
+  transition-duration: 0.5s;
+  color: rgb(36, 142, 241);
+}
+.fa-heart{
+  color: red;
+}
+button{
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-card{
+  
+  background-color: rgb(26, 137, 228);
+  color: white;
+}
+.btn-card:active{
+  background-color: rgb(107, 107, 107);
+  color: white;
+}
+
+/*  ================================= actualitée.html ============================== */
+/* actu conteneur */
+
+article{
+display: flex;
+height: 300px;
+transition-duration: 0.3s;
+}
+article:hover{
+padding-left: 10px;
+border-left: 3px solid gray;
+transition-duration: 0.3s;
+background-color: rgb(243, 243, 243) !important;
+}
+.article_img{
+  width: 30%;
+}
+.article_img img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.article_body{
+  width: 70%;
+  text-overflow: clip;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.content_body{
+  height: 70%;
+}
+.content_footer{
+  height: 10%;
+  float: right;
+}
+.btn-actu{
+  padding: 10% 20%;
+  font-size: 0.8vw;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+.btn-actu:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(36, 142, 241);
+  transition-duration: 0.5s;
+}
+.btn-actu:active{
+  background-color: rgb(0, 101, 196);
+  transition-duration: 0.5s;
+  animation-direction: alternate;
+}
+
+/*  ================================= coding.html ============================== */
+/* conding conteneur */
+.title-groups{
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+
+}
+.reverse-color{
+  background-color: rgb(36, 142, 241) !important;
+  color: white !important;
+}
+.reverse-color .title-groups{
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+.groups{
+  display:flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
+}
+.group-container{
+  width: 275px;
+  height: 300px;
+  margin: 5px 15px 5px 15px;
+}
+.group-header{
+  padding-top: 5px;
+}
+.group-header img{
+  border-radius: 50% !important;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.group-body{
+
+}
+.group-body h3{
+  text-transform: none;
+  transform: scale(1.4);
+}
+.uppercase{
+  text-transform: uppercase
+}
+
+/*  ================================= calendrier.html ============================== */
+/* calendirer conteneur */
+.container-calender{
+  display:flex;
+  width: 100%;
+}
+.calender_column_week{
+  min-width: 50px;
+  width: 5%;
+  border-top: rgb(204, 205, 207) 0.5px solid;
+  border-bottom: rgb(204, 205, 207) 0.5px solid;
+  border-right: rgb(204, 205, 207) 0.5px solid;
+}
+.calender_column_time{
+  min-width: 50px;
+  width: 5%;
+  /* border-top: rgb(204, 205, 207) 0.5px solid; */
+  border-right: rgb(204, 205, 207) 0.5px solid;
+}
+.calender_column_date{
+min-width: 150px;
+border-top: rgb(204, 205, 207) 0.5px solid;
+border-right: rgb(204, 205, 207) 0.5px solid;
+width: 20%;
+margin-bottom: 15px;
+}
+.calender_header_mot{
+  padding-top: 5px;
+padding-left: 15px;
+text-align: left;
+font-size: 0.7vw;
+}
+.calender_header_nombre{
+  padding-top: 0px;
+  margin: 0;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 2.8vw;
+  font-weight: bold;
+}
+.calender_header_nombre:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.last_day{
+ color: rgb(134, 134, 134);
+}
+.present_day{
+  color: rgb(5, 125, 236);
+  background-color: rgb(243, 242, 242)
+}
+.futur_day{
+color: rgb(27, 27, 27);
+}
+
+.calender_column_body{
+  border-top: rgb(204, 205, 207) 0.5px solid;
+  border-right: rgb(204, 205, 207) 0.5px solid;
+  width: 20%;
+  /* height: 3vw; */
+}
+.container-calender:last-child{
+  border-bottom: rgb(204, 205, 207) 0.5px solid;
+  margin-bottom: 25px;
+}
+
+/* =================  Animations  ===================== */
+.pulse{
+  animation-name: pulse;
+  animation-duration: 2500ms;
+  transform-origin:70% 70%;
+  transform: rotate(45deg);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulse {
+
+  0% { transform: scale(1) rotate(15deg); }
+  30% { transform: scale(1.07) rotate(15deg); }
+  40% { transform: scale(1.14)rotate(15deg); }
+  50% { transform: scale(1.21)rotate(15deg); }
+  60% { transform: scale(1.21)rotate(15deg); }
+  70% { transform: scale(1.14)rotate(15deg); }
+  80% { transform: scale(1.07)rotate(15deg); }
+  100% { transform: scale(1)rotate(15deg); }
+}
+
+/* ====================  Extra utils   =========================== */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 999;
+}
+.tooltip .tooltiptext-bottom {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip .tooltiptext {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* ---------------- */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ============================================================== */
+
+@media screen and (max-width: 1150px) {
+  .fa-newspaper{
+    top: 50px;
+    right: 10%;
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .fa-newspaper{
+    top: 23px;
+    right: 1%;
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav-menu.active{
+    width: 150px;
+    overflow: scroll;
+  }
+  .list-menu a:last-child{
+    padding-bottom: 50px;
+  }
+  input{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+  }
+  input[type=submit]{
+    width: 100%;
+  }
+}
